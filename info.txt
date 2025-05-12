@@ -7,3 +7,27 @@ noc-schedule/
 │   └── config.php
 ├── index.php
 └── save.php
+
+noc-schedule/
+├── data/
+│   ├── employees.json
+│   └── schedules.json
+├── includes/
+│   ├── functions.php
+│   └── config.php
+├── index.php
+└── save.php
+
+noc/
+├── config.php
+├── functions-4x4.php
+├── index4.php
+├── data/
+│   ├── employees.json
+│   └── schedules.json
+
+pendientes:
+sacar el total de horas mensuales por colaborador
+sacar total total de horas semanales por colaborador
+sacar total de horas dominicales o festivos (si hace turno los domingos o festivos)
+sacar el total de recargos nocturnos deacturdo a la norma

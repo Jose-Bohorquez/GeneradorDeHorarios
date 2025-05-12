@@ -1,4 +1,5 @@
 <?php
+// Incluir el archivo de funciones correctamente
 require_once 'functions-4x4.php';
 
 $employees = loadEmployees();
@@ -7,12 +8,16 @@ $error = '';
 $generatedSchedule = [];
 $startDate = date('Y-m-d');
 
+// Resto del código permanece igual...
+// [Todo el contenido que ya tenías en index4.php]
+
+
 // Procesar formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['generate'])) {
         $startDate = $_POST['start_date'] ?? date('Y-m-d');
         $month = $_POST['month'] ?? null;
-        $generatedSchedule = generateRotativeSchedule4x4($employees, $startDate, $month);
+        $generatedSchedule = generateRotativeSchedule_4x4($employees, $startDate, $month);
         
         if (isset($generatedSchedule['error'])) {
             $error = $generatedSchedule['error'];

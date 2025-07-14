@@ -1,0 +1,28 @@
+{
+    "employees": [
+        {
+            "name": "Dilan",
+            "active": true
+        },
+        {
+            "name": "Diego",
+            "active": true
+        },
+        {
+            "name": "Tania",
+            "active": true
+        },
+        {
+            "name": "Carlos",
+            "active": true
+        },
+        {
+            "name": "Brayan",
+            "active": false
+        },
+        {
+            "name": "Pablo",
+            "active": false
+        }
+    ]
+}

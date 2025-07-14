@@ -10,7 +10,8 @@ function loadEmployees() {
 // Guardar empleados
 function saveEmployees($employees) {
     $data = ['employees' => $employees];
-    file_put_contents(EMPLOYEES_FILE, json_encode($data, JSON_PRETTY_PRINT));
+    $result = file_put_contents(EMPLOYEES_FILE, json_encode($data, JSON_PRETTY_PRINT));
+    return $result !== false;
 }
 
 // Cargar horarios
@@ -22,7 +23,8 @@ function loadSchedules() {
 // Guardar horarios
 function saveSchedules($schedules) {
     $data = ['schedules' => $schedules];
-    file_put_contents(SCHEDULES_FILE, json_encode($data, JSON_PRETTY_PRINT));
+    $result = file_put_contents(SCHEDULES_FILE, json_encode($data, JSON_PRETTY_PRINT));
+    return $result !== false;
 }
 
 // Generar horarios rotativos 2x2

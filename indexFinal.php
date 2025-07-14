@@ -58,10 +58,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Procesar generación de horario
     if (isset($_POST['generate_schedule']) || isset($_POST['preview_schedule'])) {
         $selectedMonth = $_POST['month'] ?? date('Y-m');
+        $shiftType = $_POST['shift_type'] ?? '8hours';
         
         if (!empty($selectedMonth)) {
             $monthDate = $selectedMonth . '-01';
-            $schedule = generateRotativeSchedule($employees, $monthDate, $monthDate);
+            $schedule = generateRotativeSchedule($employees, $monthDate, $monthDate, $shiftType);
             
             if (isset($schedule['error'])) {
                 $error = $schedule['error'];
@@ -70,6 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // Guardar horario
                     $scheduleData = [
                         'month' => $selectedMonth,
+                        'shift_type' => $shiftType,
                         'generated_date' => date('Y-m-d H:i:s'),
                         'schedule' => $schedule,
                         'rotation_position' => $schedule[0]['rotation_position'] ?? 0
@@ -78,14 +80,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $schedules[] = $scheduleData;
                     
                     if (saveSchedules($schedules)) {
-                        $success = "Horario generado y guardado correctamente para " . date('F Y', strtotime($monthDate));
+                        $success = "Horario generado y guardado correctamente para " . translateMonthToSpanish(date('F Y', strtotime($monthDate))) . " con turnos de " . ($shiftType === '6hours' ? '6 horas' : '8 horas');
                     } else {
                         $error = "Error al guardar el horario.";
                     }
                 } else {
                     // Solo preview
                     $previewSchedule = $schedule;
-                    $update = "Vista previa del horario para " . date('F Y', strtotime($monthDate));
+                    $update = "Vista previa del horario para " . translateMonthToSpanish(date('F Y', strtotime($monthDate))) . " con turnos de " . ($shiftType === '6hours' ? '6 horas' : '8 horas');
                 }
             }
         } else {
@@ -111,61 +113,65 @@ if (isset($_POST['preview_schedule']) && isset($previewSchedule)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Horarios NOC 2x2</title>
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
     <style>
-        :root {
-            --bs-primary: #6366f1;
-            --bs-primary-rgb: 99, 102, 241;
-        }
-        
-        body {
-            background-color: #f8f9fa;
-        }
-        
         .employee-card {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e5e7eb;
-            margin-bottom: 20px;
             transition: all 0.3s ease;
         }
         
         .employee-card:hover {
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
             transform: translateY(-2px);
         }
         
         .employee-card.inactive {
             opacity: 0.6;
-            background-color: #f8f9fa;
         }
         
         .time-inputs {
             display: none;
-            margin-top: 15px;
-            padding: 15px;
-            background: #f8fafc;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
         }
         
         .time-inputs.show {
             display: block;
-        }
-        
-        .accordion-button:not(.collapsed) {
-            background-color: #6366f1;
-            color: white;
-        }
-        
-        .accordion-button:focus {
-            box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.25);
         }
         
         .calendar-day {
@@ -186,354 +192,352 @@ if (isset($_POST['preview_schedule']) && isset($previewSchedule)) {
         }
     </style>
 </head>
-<body>
-    <div class="container-fluid">
-        <!-- Header -->
-        <header class="header-gradient text-white py-4 mb-4">
-            <div class="container">
-                <div class="text-center">
-                    <h1 class="display-5 fw-bold mb-2">
-                        <i class="fas fa-calendar-alt me-3"></i>Generador de Horarios NOC 2x2
-                    </h1>
-                    <p class="lead mb-0">Sistema de rotación de turnos para equipos de monitoreo</p>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="header-gradient text-white py-8 mb-6">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    <i class="fas fa-calendar-alt mr-4"></i>Generador de Horarios NOC 2x2
+                </h1>
+                <p class="text-xl opacity-90">Sistema de rotación de turnos para equipos de monitoreo</p>
+            </div>
+        </div>
+        
+        <!-- Mensajes de alerta -->
+        <?php if ($error): ?>
+            <div class="container mx-auto px-4 mt-6">
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg relative" role="alert">
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>
+                        <span><?= htmlspecialchars($error) ?></span>
+                        <button type="button" class="absolute top-0 bottom-0 right-0 px-4 py-3" onclick="this.parentElement.parentElement.style.display='none'">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Mensajes de alerta -->
-            <?php if ($error): ?>
-                <div class="container mt-4">
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <i class="fas fa-exclamation-triangle me-2"></i>
-                        <?= htmlspecialchars($error) ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <?php endif; ?>
+        
+        <?php if ($success): ?>
+            <div class="container mx-auto px-4 mt-6">
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg relative" role="alert">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        <span><?= htmlspecialchars($success) ?></span>
+                        <button type="button" class="absolute top-0 bottom-0 right-0 px-4 py-3" onclick="this.parentElement.parentElement.style.display='none'">
+                            <i class="fas fa-times"></i>
+                        </button>
                     </div>
                 </div>
-            <?php endif; ?>
-            
-            <?php if ($success): ?>
-                <div class="container mt-4">
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <i class="fas fa-check-circle me-2"></i>
-                        <?= htmlspecialchars($success) ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        <?php endif; ?>
+        
+        <?php if ($update): ?>
+            <div class="container mx-auto px-4 mt-6">
+                <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded-lg relative" role="alert">
+                    <div class="flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        <span><?= htmlspecialchars($update) ?></span>
+                        <button type="button" class="absolute top-0 bottom-0 right-0 px-4 py-3" onclick="this.parentElement.parentElement.style.display='none'">
+                            <i class="fas fa-times"></i>
+                        </button>
                     </div>
                 </div>
-            <?php endif; ?>
-            
-            <?php if ($update): ?>
-                <div class="container mt-4">
-                    <div class="alert alert-info alert-dismissible fade show" role="alert">
-                        <i class="fas fa-info-circle me-2"></i>
-                        <?= htmlspecialchars($update) ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                </div>
-            <?php endif; ?>
-        </header>
+            </div>
+        <?php endif; ?>
+    </header>
 
-        <div class="container">
-            <!-- Employee Management Accordion -->
-            <section class="mb-4">
-                <div class="accordion" id="employeeAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="employeeHeading">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#employeeCollapse" aria-expanded="true" aria-controls="employeeCollapse">
-                                <div class="d-flex align-items-center w-100">
-                                    <i class="fas fa-users me-3"></i>
-                                    <div class="flex-grow-1">
-                                        <div class="fw-bold fs-5">Gestionar Empleados</div>
-                                        <small class="text-light opacity-75">Configura el tipo de empleado, horarios y permisos</small>
+    <div class="container mx-auto px-4">
+        <!-- Employee Management Section -->
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-6">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-2xl mr-4"></i>
+                            <div>
+                                <h2 class="text-2xl font-bold">Gestionar Empleados</h2>
+                                <p class="text-indigo-100">Configura el tipo de empleado, horarios y permisos</p>
+                            </div>
+                        </div>
+                        <div class="flex space-x-3">
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm" id="activeCount">
+                                <i class="fas fa-user-check mr-1"></i>
+                                <?= count(array_filter($employees, fn($emp) => $emp['active'])) ?> Activos
+                            </span>
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
+                                <i class="fas fa-users mr-1"></i>
+                                <?= count($employees) ?> Total
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-6">
+                    <!-- Estadísticas rápidas -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8" id="statsContainer">
+                        <div class="flex items-center justify-center p-4 bg-green-50 rounded-lg">
+                            <i class="fas fa-user-check text-green-500 text-2xl mr-3"></i>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-green-600" id="activeEmployeesCount"><?= count(array_filter($employees, fn($emp) => $emp['active'])) ?></div>
+                                <div class="text-sm text-gray-600">Empleados Activos</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-blue-50 rounded-lg">
+                            <i class="fas fa-sync-alt text-blue-500 text-2xl mr-3"></i>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-blue-600" id="rotativeEmployeesCount"><?= count(array_filter($employees, fn($emp) => empty($emp['fixed_schedule']) && $emp['active'])) ?></div>
+                                <div class="text-sm text-gray-600">Rotativos</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-indigo-50 rounded-lg">
+                            <i class="fas fa-clock text-indigo-500 text-2xl mr-3"></i>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-indigo-600" id="fixedEmployeesCount"><?= count(array_filter($employees, fn($emp) => !empty($emp['fixed_schedule']) && $emp['active'])) ?></div>
+                                <div class="text-sm text-gray-600">Horario Fijo</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-yellow-50 rounded-lg">
+                            <i class="fas fa-user-tie text-yellow-500 text-2xl mr-3"></i>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-yellow-600" id="supervisorEmployeesCount"><?= count(array_filter($employees, fn($emp) => !empty($emp['supervisor']) && $emp['active'])) ?></div>
+                                <div class="text-sm text-gray-600">Supervisores</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de empleados -->
+                    <form method="POST" id="employeeForm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <?php foreach ($employees as $index => $employee): ?>
+                                <div class="employee-card bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg <?= !$employee['active'] ? 'inactive' : '' ?>" id="employeeCard_<?= $index ?>">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="text-lg font-semibold text-gray-800"><?= htmlspecialchars($employee['name']) ?></h3>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" class="sr-only peer active-switch" 
+                                                   name="active[<?= $index ?>]" 
+                                                   id="active_<?= $index ?>" 
+                                                   data-index="<?= $index ?>"
+                                                   <?= $employee['active'] ? 'checked' : '' ?>>
+                                            <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                                            <span class="ml-3 text-sm font-medium text-gray-700">Activo</span>
+                                        </label>
                                     </div>
-                                    <div class="ms-3">
-                                        <span class="badge bg-light text-dark me-2" id="activeCount">
-                                            <i class="fas fa-user-check me-1"></i>
-                                            <?= count(array_filter($employees, fn($emp) => $emp['active'])) ?> Activos
-                                        </span>
-                                        <span class="badge bg-light text-dark">
-                                            <i class="fas fa-users me-1"></i>
-                                            <?= count($employees) ?> Total
-                                        </span>
+
+                                    <!-- Tipo de empleado -->
+                                    <div class="mb-4">
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Tipo de empleado:</label>
+                                        <div class="flex space-x-4">
+                                            <label class="flex items-center">
+                                                <input type="radio" class="form-radio text-blue-600 employee-type-radio" 
+                                                       name="employee_type[<?= $index ?>]" 
+                                                       value="rotative" 
+                                                       id="rotative_<?= $index ?>" 
+                                                       data-index="<?= $index ?>"
+                                                       <?= empty($employee['fixed_schedule']) ? 'checked' : '' ?>>
+                                                <span class="ml-2 text-sm text-gray-700">Rotativo</span>
+                                            </label>
+                                            <label class="flex items-center">
+                                                <input type="radio" class="form-radio text-blue-600 employee-type-radio" 
+                                                       name="employee_type[<?= $index ?>]" 
+                                                       value="fixed" 
+                                                       id="fixed_<?= $index ?>" 
+                                                       data-index="<?= $index ?>"
+                                                       <?= !empty($employee['fixed_schedule']) ? 'checked' : '' ?>>
+                                                <span class="ml-2 text-sm text-gray-700">Horario Fijo</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Supervisor -->
+                                    <div class="mb-4">
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="form-checkbox text-blue-600 supervisor-checkbox" 
+                                                   name="supervisor[<?= $index ?>]" 
+                                                   id="supervisor_<?= $index ?>" 
+                                                   data-index="<?= $index ?>"
+                                                   <?= !empty($employee['supervisor']) ? 'checked' : '' ?>>
+                                            <span class="ml-2 text-sm text-gray-700">Es supervisor</span>
+                                        </label>
+                                    </div>
+
+                                    <!-- Horarios fijos -->
+                                    <div class="time-inputs <?= !empty($employee['fixed_schedule']) ? 'show' : '' ?> mt-4 p-4 bg-gray-50 rounded-lg border" id="timeInputs_<?= $index ?>">
+                                        <label class="block text-sm font-medium text-gray-700 mb-3">Horario fijo:</label>
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <div>
+                                                <label class="block text-xs text-gray-600 mb-1">Inicio:</label>
+                                                <input type="time" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                                       name="start_time[<?= $index ?>]" 
+                                                       value="<?= $employee['fixed_schedule'][0] ?? '' ?>">
+                                            </div>
+                                            <div>
+                                                <label class="block text-xs text-gray-600 mb-1">Fin:</label>
+                                                <input type="time" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                                       name="end_time[<?= $index ?>]" 
+                                                       value="<?= $employee['fixed_schedule'][1] ?? '' ?>">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Badges de estado -->
+                                    <div class="mt-4 badge-container" id="badgeContainer_<?= $index ?>">
+                                        <!-- Los badges se actualizarán dinámicamente con JavaScript -->
                                     </div>
                                 </div>
+                            <?php endforeach; ?>
+                        </div>
+
+                        <!-- Botones de acción -->
+                        <div class="flex space-x-4 mt-8">
+                            <button type="submit" name="save_employees" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition duration-200">
+                                <i class="fas fa-save mr-2"></i>Guardar Cambios
                             </button>
+                            <button type="button" class="bg-gray-500 hover:bg-gray-600 text-white font-medium py-2 px-6 rounded-lg transition duration-200" onclick="resetForm()">
+                                <i class="fas fa-undo mr-2"></i>Resetear
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Generator Section -->
+        <section class="mb-8">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-blue-600 text-white p-6">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <i class="fas fa-calendar-plus mr-3"></i>Generador de Horarios
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <form method="POST" class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+                        <div>
+                            <label for="month" class="block text-sm font-medium text-gray-700 mb-2">Seleccionar Mes:</label>
+                            <input type="month" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                   name="month" id="month" value="<?= date('Y-m') ?>" required>
+                        </div>
+                        <div>
+                            <label for="shift_type" class="block text-sm font-medium text-gray-700 mb-2">Tipo de Turnos:</label>
+                            <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                    name="shift_type" id="shift_type" required>
+                                <option value="8hours">Turnos de 8 horas (Sistema anterior)</option>
+                                <option value="6hours">Turnos de 6 horas (Nueva ley colombiana)</option>
+                            </select>
+                            <p class="mt-1 text-xs text-gray-500">
+                                <i class="fas fa-info-circle mr-1"></i>
+                                6 horas: 4 turnos diarios | 8 horas: 3 turnos + descanso
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex space-x-3">
+                                <button type="submit" name="preview_schedule" class="bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg transition duration-200">
+                                    <i class="fas fa-eye mr-2"></i>Vista Previa
+                                </button>
+                                <button type="submit" name="generate_schedule" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-200">
+                                    <i class="fas fa-calendar-check mr-2"></i>Generar y Guardar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Generated Schedule Section -->
+        <?php if (!empty($generatedSchedule)): ?>
+            <section class="mb-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-green-600 text-white p-6">
+                        <h2 class="text-xl font-bold flex items-center">
+                            <i class="fas fa-calendar-alt mr-3"></i>Horario Generado
+                            <?php if (isset($generatedSchedule['month'])): ?>
+                                - <?= translateMonthToSpanish(date('F Y', strtotime($generatedSchedule['month'] . '-01'))) ?>
+                            <?php endif; ?>
                         </h2>
-                        <div id="employeeCollapse" class="accordion-collapse collapse show" aria-labelledby="employeeHeading" data-bs-parent="#employeeAccordion">
-                            <div class="accordion-body">
-                                <!-- Estadísticas rápidas -->
-                                <div class="row text-center mb-4" id="statsContainer">
-                                    <div class="col-md-3">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <i class="fas fa-user-check text-success me-2 fs-4"></i>
-                                            <div>
-                                                <div class="fw-bold text-success fs-5" id="activeEmployeesCount"><?= count(array_filter($employees, fn($emp) => $emp['active'])) ?></div>
-                                                <small class="text-muted">Empleados Activos</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <i class="fas fa-sync-alt text-info me-2 fs-4"></i>
-                                            <div>
-                                                <div class="fw-bold text-info fs-5" id="rotativeEmployeesCount"><?= count(array_filter($employees, fn($emp) => empty($emp['fixed_schedule']) && $emp['active'])) ?></div>
-                                                <small class="text-muted">Rotativos</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <i class="fas fa-clock text-primary me-2 fs-4"></i>
-                                            <div>
-                                                <div class="fw-bold text-primary fs-5" id="fixedEmployeesCount"><?= count(array_filter($employees, fn($emp) => !empty($emp['fixed_schedule']) && $emp['active'])) ?></div>
-                                                <small class="text-muted">Horario Fijo</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <i class="fas fa-user-tie text-warning me-2 fs-4"></i>
-                                            <div>
-                                                <div class="fw-bold text-warning fs-5" id="supervisorEmployeesCount"><?= count(array_filter($employees, fn($emp) => !empty($emp['supervisor']) && $emp['active'])) ?></div>
-                                                <small class="text-muted">Supervisores</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Formulario de empleados -->
-                                <form method="POST" id="employeeForm">
-                                    <div class="row">
-                                        <?php foreach ($employees as $index => $employee): ?>
-                                            <div class="col-md-6 col-lg-4 mb-3">
-                                                <div class="employee-card <?= !$employee['active'] ? 'inactive' : '' ?>" id="employeeCard_<?= $index ?>">
-                                                    <div class="d-flex justify-content-between align-items-start mb-3">
-                                                        <h6 class="fw-bold mb-0"><?= htmlspecialchars($employee['name']) ?></h6>
-                                                        <div class="form-check form-switch">
-                                                            <input class="form-check-input active-switch" type="checkbox" 
-                                                                   name="active[<?= $index ?>]" 
-                                                                   id="active_<?= $index ?>" 
-                                                                   data-index="<?= $index ?>"
-                                                                   <?= $employee['active'] ? 'checked' : '' ?>>
-                                                            <label class="form-check-label" for="active_<?= $index ?>">
-                                                                <small>Activo</small>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Tipo de empleado -->
-                                                    <div class="mb-3">
-                                                        <label class="form-label small fw-bold">Tipo de empleado:</label>
-                                                        <div class="d-flex gap-3">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input employee-type-radio" 
-                                                                       type="radio" 
-                                                                       name="employee_type[<?= $index ?>]" 
-                                                                       value="rotative" 
-                                                                       id="rotative_<?= $index ?>" 
-                                                                       data-index="<?= $index ?>"
-                                                                       <?= empty($employee['fixed_schedule']) ? 'checked' : '' ?>>
-                                                                <label class="form-check-label small" for="rotative_<?= $index ?>">
-                                                                    Rotativo
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input employee-type-radio" 
-                                                                       type="radio" 
-                                                                       name="employee_type[<?= $index ?>]" 
-                                                                       value="fixed" 
-                                                                       id="fixed_<?= $index ?>" 
-                                                                       data-index="<?= $index ?>"
-                                                                       <?= !empty($employee['fixed_schedule']) ? 'checked' : '' ?>>
-                                                                <label class="form-check-label small" for="fixed_<?= $index ?>">
-                                                                    Horario Fijo
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Supervisor -->
-                                                    <div class="form-check mb-3">
-                                                        <input class="form-check-input supervisor-checkbox" type="checkbox" 
-                                                               name="supervisor[<?= $index ?>]" 
-                                                               id="supervisor_<?= $index ?>" 
-                                                               data-index="<?= $index ?>"
-                                                               <?= !empty($employee['supervisor']) ? 'checked' : '' ?>>
-                                                        <label class="form-check-label small" for="supervisor_<?= $index ?>">
-                                                            Es supervisor
-                                                        </label>
-                                                    </div>
-
-                                                    <!-- Horarios fijos (oculto por defecto) -->
-                                                    <div class="time-inputs <?= !empty($employee['fixed_schedule']) ? 'show' : '' ?>" id="timeInputs_<?= $index ?>">
-                                                        <label class="form-label small fw-bold">Horario fijo:</label>
-                                                        <div class="row">
-                                                            <div class="col-6">
-                                                                <label class="form-label small">Inicio:</label>
-                                                                <input type="time" class="form-control form-control-sm" 
-                                                                       name="start_time[<?= $index ?>]" 
-                                                                       value="<?= $employee['fixed_schedule'][0] ?? '' ?>">
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <label class="form-label small">Fin:</label>
-                                                                <input type="time" class="form-control form-control-sm" 
-                                                                       name="end_time[<?= $index ?>]" 
-                                                                       value="<?= $employee['fixed_schedule'][1] ?? '' ?>">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Badges de estado -->
-                                                    <div class="mt-3 badge-container" id="badgeContainer_<?= $index ?>">
-                                                        <!-- Los badges se actualizarán dinámicamente con JavaScript -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <?php endforeach; ?>
-                                    </div>
-
-                                    <!-- Botones de acción -->
-                                    <div class="d-flex gap-2 mt-4">
-                                        <button type="submit" name="save_employees" class="btn btn-primary">
-                                            <i class="fas fa-save me-2"></i>Guardar Cambios
-                                        </button>
-                                        <button type="button" class="btn btn-secondary" onclick="resetForm()">
-                                            <i class="fas fa-undo me-2"></i>Resetear
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </section>
-
-            <!-- Schedule Generator Section -->
-            <section class="mb-4">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0">
-                            <i class="fas fa-calendar-plus me-2"></i>Generador de Horarios
-                        </h5>
-                    </div>
-                    <div class="card-body">
-                        <form method="POST" class="row g-3 align-items-end">
-                            <div class="col-md-4">
-                                <label for="month" class="form-label">Seleccionar Mes:</label>
-                                <input type="month" class="form-control" name="month" id="month" 
-                                       value="<?= date('Y-m') ?>" required>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="d-flex gap-2">
-                                    <button type="submit" name="preview_schedule" class="btn btn-outline-primary">
-                                        <i class="fas fa-eye me-2"></i>Vista Previa
-                                    </button>
-                                    <button type="submit" name="generate_schedule" class="btn btn-primary">
-                                        <i class="fas fa-calendar-check me-2"></i>Generar y Guardar
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Generated Schedule Section -->
-            <?php if (!empty($generatedSchedule)): ?>
-                <section class="mb-4">
-                    <div class="card">
-                        <div class="card-header bg-success text-white">
-                            <h5 class="mb-0">
-                                <i class="fas fa-calendar-alt me-2"></i>Horario Generado
-                                <?php if (isset($generatedSchedule['month'])): ?>
-                                    - <?= translateMonthToSpanish(date('F Y', strtotime($generatedSchedule['month'] . '-01'))) ?>
-                                <?php endif; ?>
-                            </h5>
-                        </div>
-                        <div class="card-body">
-                            <?php 
-                            $schedule = $generatedSchedule['schedule'] ?? $generatedSchedule;
-                            $weeks = organizeScheduleByWeek($schedule);
-                            
-                            foreach ($weeks as $weekIndex => $week): 
-                                $firstDay = null;
-                                foreach ($week as $day) {
-                                    if (!empty($day)) {
-                                        $firstDay = new DateTime($day[0]['date']);
-                                        break;
-                                    }
+                    <div class="p-6">
+                        <?php 
+                        $schedule = $generatedSchedule['schedule'] ?? $generatedSchedule;
+                        $weeks = organizeScheduleByWeek($schedule);
+                        
+                        foreach ($weeks as $weekIndex => $week): 
+                            $firstDay = null;
+                            foreach ($week as $day) {
+                                if (!empty($day)) {
+                                    $firstDay = new DateTime($day[0]['date']);
+                                    break;
                                 }
+                            }
+                            
+                            if ($firstDay):
+                                $weekStart = clone $firstDay;
+                                $weekStart->modify('monday this week');
+                                $weekEnd = clone $weekStart;
+                                $weekEnd->modify('+6 days');
+                        ?>
+                            <div class="mb-8">
+                                <h3 class="text-lg font-semibold text-gray-700 mb-4">
+                                    Semana <?= $weekIndex + 1 ?>: 
+                                    <?= translateMonthToSpanish($weekStart->format('d F')) ?> - 
+                                    <?= translateMonthToSpanish($weekEnd->format('d F Y')) ?>
+                                </h3>
                                 
-                                if ($firstDay):
-                                    $weekStart = clone $firstDay;
-                                    $weekStart->modify('monday this week');
-                                    $weekEnd = clone $weekStart;
-                                    $weekEnd->modify('+6 days');
-                            ?>
-                                <div class="mb-4">
-                                    <h6 class="text-muted mb-3">
-                                        Semana <?= $weekIndex + 1 ?>: 
-                                        <?= translateMonthToSpanish($weekStart->format('d F')) ?> - 
-                                        <?= translateMonthToSpanish($weekEnd->format('d F Y')) ?>
-                                    </h6>
-                                    
-                                    <div class="row">
-                                        <?php 
-                                        $days = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
-                                        for ($dayNum = 1; $dayNum <= 7; $dayNum++): 
-                                            $daySchedule = $week[$dayNum] ?? [];
-                                        ?>
-                                            <div class="col">
-                                                <div class="calendar-day border rounded p-2 bg-light">
-                                                    <div class="fw-bold text-center mb-2 small">
-                                                        <?= $days[$dayNum - 1] ?>
-                                                        <?php if (!empty($daySchedule)): ?>
-                                                            <br><small class="text-muted"><?= date('d/m', strtotime($daySchedule[0]['date'])) ?></small>
-                                                        <?php endif; ?>
-                                                    </div>
-                                                    
-                                                    <?php foreach ($daySchedule as $entry): ?>
-                                                        <?php
-                                                        $badgeClass = 'bg-secondary';
-                                                        switch ($entry['shift']) {
-                                                            case 'Mañana': $badgeClass = 'bg-warning text-dark'; break;
-                                                            case 'Tarde': $badgeClass = 'bg-info text-dark'; break;
-                                                            case 'Noche': $badgeClass = 'bg-dark'; break;
-                                                            case 'Descanso': $badgeClass = 'bg-success'; break;
-                                                            case 'Oficina': $badgeClass = 'bg-primary'; break;
-                                                        }
-                                                        ?>
-                                                        <div class="shift-badge badge <?= $badgeClass ?> d-block text-start mb-1">
-                                                            <div class="fw-bold"><?= htmlspecialchars($entry['employee']) ?></div>
-                                                            <div><?= htmlspecialchars($entry['shift']) ?></div>
-                                                            <?php if ($entry['start'] && $entry['end']): ?>
-                                                                <small><?= $entry['start'] ?> - <?= $entry['end'] ?></small>
-                                                            <?php endif; ?>
-                                                        </div>
-                                                    <?php endforeach; ?>
-                                                </div>
+                                <div class="grid grid-cols-7 gap-2">
+                                    <?php 
+                                    $days = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+                                    for ($dayNum = 1; $dayNum <= 7; $dayNum++): 
+                                        $daySchedule = $week[$dayNum] ?? [];
+                                    ?>
+                                        <div class="calendar-day border border-gray-200 rounded-lg p-3 bg-gray-50">
+                                            <div class="font-semibold text-center mb-2 text-sm">
+                                                <?= $days[$dayNum - 1] ?>
+                                                <?php if (!empty($daySchedule)): ?>
+                                                    <br><span class="text-xs text-gray-500"><?= date('d/m', strtotime($daySchedule[0]['date'])) ?></span>
+                                                <?php endif; ?>
                                             </div>
-                                        <?php endfor; ?>
-                                    </div>
+                                            
+                                            <?php foreach ($daySchedule as $entry): ?>
+                                                <?php
+                                                $badgeClass = 'bg-gray-500 text-white';
+                                                switch ($entry['shift']) {
+                                                    case 'Madrugada': $badgeClass = 'bg-gray-800 text-white'; break;
+                                                    case 'Mañana': $badgeClass = 'bg-yellow-400 text-gray-800'; break;
+                                                    case 'Tarde': $badgeClass = 'bg-blue-400 text-white'; break;
+                                                    case 'Noche': $badgeClass = 'bg-indigo-600 text-white'; break;
+                                                    case 'Descanso': $badgeClass = 'bg-green-500 text-white'; break;
+                                                    case 'Oficina': $badgeClass = 'bg-gray-100 text-gray-800 border border-gray-300'; break;
+                                                }
+                                                ?>
+                                                <div class="shift-badge <?= $badgeClass ?> px-2 py-1 rounded text-xs mb-1 block">
+                                                    <div class="font-semibold"><?= htmlspecialchars($entry['employee']) ?></div>
+                                                    <div><?= htmlspecialchars($entry['shift']) ?></div>
+                                                    <?php if ($entry['start'] && $entry['end']): ?>
+                                                        <div class="text-xs opacity-90"><?= $entry['start'] ?> - <?= $entry['end'] ?></div>
+                                                    <?php endif; ?>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    <?php endfor; ?>
                                 </div>
-                            <?php 
-                                endif;
-                            endforeach; 
-                            ?>
-                        </div>
+                            </div>
+                        <?php 
+                            endif;
+                        endforeach; 
+                        ?>
                     </div>
-                </section>
-            <?php endif; ?>
-        </div>
+                </div>
+            </section>
+        <?php endif; ?>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <div class="container">
-            <p class="mb-0">&copy; 2024 Generador de Horarios NOC 2x2. Sistema de gestión de turnos.</p>
+    <footer class="bg-gray-800 text-white text-center py-6 mt-12">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 Generador de Horarios NOC 2x2. Sistema de gestión de turnos.</p>
         </div>
     </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
         // Función para actualizar badges de un empleado
@@ -547,21 +551,21 @@ if (isset($_POST['preview_schedule']) && isset($previewSchedule)) {
             
             // Badge de estado activo/inactivo
             if (isActive) {
-                badges += '<span class="badge bg-success me-1"><i class="fas fa-check me-1"></i>Activo</span>';
+                badges += '<span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 mr-1 mb-1"><i class="fas fa-check mr-1"></i>Activo</span>';
             } else {
-                badges += '<span class="badge bg-secondary me-1"><i class="fas fa-pause me-1"></i>Inactivo</span>';
+                badges += '<span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800 mr-1 mb-1"><i class="fas fa-pause mr-1"></i>Inactivo</span>';
             }
             
             // Badge de supervisor
             if (isSupervisor) {
-                badges += '<span class="badge bg-warning text-dark me-1"><i class="fas fa-user-tie me-1"></i>Supervisor</span>';
+                badges += '<span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 mr-1 mb-1"><i class="fas fa-user-tie mr-1"></i>Supervisor</span>';
             }
             
             // Badge de tipo de empleado
             if (isFixed) {
-                badges += '<span class="badge bg-info me-1"><i class="fas fa-clock me-1"></i>Horario Fijo</span>';
+                badges += '<span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 mr-1 mb-1"><i class="fas fa-clock mr-1"></i>Horario Fijo</span>';
             } else {
-                badges += '<span class="badge bg-primary me-1"><i class="fas fa-sync-alt me-1"></i>Rotativo</span>';
+                badges += '<span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mr-1 mb-1"><i class="fas fa-sync-alt mr-1"></i>Rotativo</span>';
             }
             
             badgeContainer.innerHTML = badges;
@@ -596,7 +600,7 @@ if (isset($_POST['preview_schedule']) && isset($previewSchedule)) {
             document.getElementById('rotativeEmployeesCount').textContent = rotativeCount;
             document.getElementById('fixedEmployeesCount').textContent = fixedCount;
             document.getElementById('supervisorEmployeesCount').textContent = supervisorCount;
-            document.getElementById('activeCount').innerHTML = `<i class="fas fa-user-check me-1"></i>${activeCount} Activos`;
+            document.getElementById('activeCount').innerHTML = `<i class="fas fa-user-check mr-1"></i>${activeCount} Activos`;
         }
         
         // Función para actualizar apariencia de la tarjeta

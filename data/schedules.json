@@ -7991,6 +7991,5510 @@
                 }
             ],
             "rotation_position": 0
+        },
+        {
+            "month": "2025-07",
+            "shift_type": "8hours",
+            "generated_date": "2025-07-14 20:22:22",
+            "schedule": [
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-01",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-01",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-01",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-01",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-02",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-02",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-02",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-02",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-02",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-02",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-02",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-02",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-03",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-03",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-03",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-03",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-03",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-03",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-03",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-03",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-04",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-04",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-04",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-04",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-04",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-04",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-04",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-04",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-05",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-05",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-05",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-05",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-05",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-05",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-05",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-05",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-06",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-06",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-06",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-06",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-06",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-06",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-06",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-06",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-07",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-07",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-07",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-07",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-07",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-07",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-07",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-07",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-08",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-08",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-08",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-08",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-08",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-08",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-08",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-08",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-09",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-09",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-09",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-09",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-09",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-09",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-09",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-09",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-10",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-10",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-10",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-10",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-10",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-10",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-10",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-10",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-11",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-11",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-11",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-11",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-11",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-11",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-11",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-11",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-12",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-12",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-12",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-12",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-12",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-12",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-12",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-12",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-13",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-13",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-13",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-13",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-13",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-13",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-13",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-13",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-14",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-14",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-14",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-14",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-14",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-14",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-14",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-14",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-15",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-15",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-15",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-15",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-15",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-15",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-15",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-15",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-16",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-16",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-16",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-16",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-16",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-16",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-16",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-16",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-17",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-17",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-17",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-17",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-17",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-17",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-17",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-17",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-18",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-18",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-18",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-18",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-18",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-18",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-18",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-18",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-19",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-19",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-19",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-19",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-19",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-19",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-19",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-19",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-20",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-20",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-20",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-20",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-20",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-20",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-20",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-20",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-21",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-21",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-21",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-21",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-21",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-21",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-21",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-21",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-22",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-22",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-22",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-22",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-22",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-22",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-22",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-22",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-23",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-23",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-23",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-23",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-23",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-23",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-23",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-23",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-24",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-24",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-24",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-24",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-24",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-24",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-24",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-24",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-25",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-25",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-25",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-25",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-25",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-25",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-25",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-25",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-26",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-26",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-26",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-26",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-26",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-26",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-26",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-26",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-27",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-27",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-27",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-27",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-27",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-27",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-27",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-27",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-28",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-28",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-28",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-28",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-28",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-28",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-28",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-28",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-29",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-29",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-29",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-29",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-29",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-29",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-29",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-29",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-30",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-30",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-30",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-30",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-30",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-30",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-30",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-30",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-31",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-31",
+                    "shift": "Descanso",
+                    "start": null,
+                    "end": null,
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-31",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-31",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-31",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-31",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-31",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-31",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                }
+            ],
+            "rotation_position": 0
+        },
+        {
+            "month": "2025-07",
+            "shift_type": "8hours",
+            "generated_date": "2025-07-14 22:27:59",
+            "schedule": [
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-01",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-01",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-01",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-01",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-02",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-02",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-02",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-02",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-03",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-03",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-03",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-03",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-04",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-04",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-04",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-04",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-05",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-05",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-05",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-05",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-05",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-06",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-06",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-06",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-06",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-06",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-07",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-07",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-07",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-07",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-07",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-08",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-08",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-08",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-08",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-08",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-09",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 8
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-09",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 8
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-09",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 8
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-09",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 8
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-10",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 9
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-10",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 9
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-10",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 9
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-10",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 9
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-11",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 10
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-11",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 10
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-11",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 10
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-11",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 10
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-12",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 11
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-12",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 11
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-12",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 11
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-12",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 11
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-13",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-13",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-13",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-13",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-13",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-14",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-14",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-14",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-14",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-14",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-15",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-15",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-15",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-15",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-15",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-16",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-16",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-16",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-16",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-16",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-17",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 16
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-17",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 16
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-17",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 16
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-17",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 16
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-18",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 17
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-18",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 17
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-18",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 17
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-18",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 17
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-19",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 18
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-19",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 18
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-19",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 18
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-19",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 18
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-20",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 19
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-20",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 19
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-20",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 19
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-20",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 19
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-21",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-21",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-21",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-21",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-21",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-22",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-22",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-22",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-22",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-22",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-23",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-23",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-23",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-23",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-23",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-24",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-24",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-24",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-24",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-24",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-25",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 24
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-25",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 24
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-25",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 24
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-25",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 24
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-26",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 25
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-26",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 25
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-26",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 25
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-26",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 25
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-27",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 26
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-27",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 26
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-27",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 26
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-27",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 26
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-28",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 27
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-28",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 27
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-28",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 27
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-28",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 27
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-29",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-29",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-29",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-29",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-29",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-30",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-30",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-30",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-30",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-30",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-31",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 30
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-31",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 30
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-31",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 30
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-31",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 30
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-31",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 30
+                }
+            ],
+            "rotation_position": 0
+        },
+        {
+            "month": "2025-07",
+            "shift_type": "6hours",
+            "generated_date": "2025-07-14 22:28:02",
+            "schedule": [
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-01",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-01",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-01",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-01",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-01",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-02",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-02",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-02",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-02",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-02",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-03",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-03",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-03",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-03",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-03",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-04",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-04",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-04",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-04",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-04",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-05",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-05",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-05",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-05",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-05",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-05",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-06",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-06",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-06",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-06",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-06",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-06",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-07",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-07",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-07",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-07",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-07",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-07",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-08",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-08",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-08",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-08",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-08",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-08",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-09",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 8
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-09",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 8
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-09",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 8
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-09",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 8
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-09",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 8
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-10",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 9
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-10",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 9
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-10",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 9
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-10",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 9
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-10",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 9
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-11",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 10
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-11",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 10
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-11",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 10
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-11",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 10
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-11",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 10
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-12",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 11
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-12",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 11
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-12",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 11
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-12",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 11
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-12",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 11
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-13",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-13",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-13",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-13",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-13",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-13",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-14",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-14",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-14",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-14",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-14",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-14",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-15",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-15",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-15",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-15",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-15",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-15",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-16",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-16",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-16",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-16",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-16",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-16",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-17",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 16
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-17",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 16
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-17",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 16
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-17",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 16
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-17",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 16
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-18",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 17
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-18",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 17
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-18",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 17
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-18",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 17
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-18",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 17
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-19",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 18
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-19",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 18
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-19",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 18
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-19",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 18
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-19",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 18
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-20",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 19
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-20",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 19
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-20",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 19
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-20",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 19
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-20",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 19
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-21",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-21",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-21",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-21",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-21",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-21",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-22",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-22",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-22",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-22",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-22",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-22",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-23",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-23",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-23",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-23",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-23",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-23",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-24",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-24",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-24",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-24",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-24",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-24",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-25",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 24
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-25",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 24
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-25",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 24
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-25",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 24
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-25",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 24
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-26",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 25
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-26",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 25
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-26",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 25
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-26",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 25
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-26",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 25
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-27",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 26
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-27",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 26
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-27",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 26
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-27",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 26
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-27",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 26
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-28",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 27
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-28",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 27
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-28",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 27
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-28",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 27
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-28",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 27
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-29",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-29",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-29",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-29",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-29",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-29",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-30",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-30",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-30",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-30",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-30",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-30",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-31",
+                    "shift": "Madrugada",
+                    "start": "00:00",
+                    "end": "06:00",
+                    "rotation_position": 30
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-31",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "12:00",
+                    "rotation_position": 30
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-31",
+                    "shift": "Tarde",
+                    "start": "12:00",
+                    "end": "18:00",
+                    "rotation_position": 30
+                },
+                {
+                    "employee": "Pablo",
+                    "date": "2025-07-31",
+                    "shift": "Noche",
+                    "start": "18:00",
+                    "end": "00:00",
+                    "rotation_position": 30
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-31",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 30
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-31",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 30
+                }
+            ],
+            "rotation_position": 0
+        },
+        {
+            "month": "2025-07",
+            "shift_type": "8hours",
+            "generated_date": "2025-07-14 22:30:44",
+            "schedule": [
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-01",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-01",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-01",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-01",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 0
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-02",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-02",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-02",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-02",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 1
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-03",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-03",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-03",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-03",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 2
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-04",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-04",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-04",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-04",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 3
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-05",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-05",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-05",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-05",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 4
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-06",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-06",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-06",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-06",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 5
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-07",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-07",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-07",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-07",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-07",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 6
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-08",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-08",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-08",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-08",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-08",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 7
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-09",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 8
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-09",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 8
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-09",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 8
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-09",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 8
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-10",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 9
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-10",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 9
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-10",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 9
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-10",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 9
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-11",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 10
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-11",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 10
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-11",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 10
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-11",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 10
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-12",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 11
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-12",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 11
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-12",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 11
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-12",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 11
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-13",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-13",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-13",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-13",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 12
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-14",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-14",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-14",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-14",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 13
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-15",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-15",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-15",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-15",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-15",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 14
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-16",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-16",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-16",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-16",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-16",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 15
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-17",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 16
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-17",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 16
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-17",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 16
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-17",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 16
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-18",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 17
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-18",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 17
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-18",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 17
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-18",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 17
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-19",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 18
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-19",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 18
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-19",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 18
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-19",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 18
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-20",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 19
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-20",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 19
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-20",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 19
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-20",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 19
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-21",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-21",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-21",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-21",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 20
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-22",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-22",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-22",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-22",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 21
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-23",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-23",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-23",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-23",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-23",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 22
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-24",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-24",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-24",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-24",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-24",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 23
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-25",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 24
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-25",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 24
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-25",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 24
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-25",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 24
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-26",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 25
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-26",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 25
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-26",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 25
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-26",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 25
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-27",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 26
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-27",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 26
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-27",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 26
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-27",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 26
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-28",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 27
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-28",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 27
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-28",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 27
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-28",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 27
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-29",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-29",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-29",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-29",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 28
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-30",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-30",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-30",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-30",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 29
+                },
+                {
+                    "employee": "Tania",
+                    "date": "2025-07-31",
+                    "shift": "Ma\u00f1ana",
+                    "start": "06:00",
+                    "end": "14:00",
+                    "rotation_position": 30
+                },
+                {
+                    "employee": "Diego",
+                    "date": "2025-07-31",
+                    "shift": "Tarde",
+                    "start": "14:00",
+                    "end": "22:00",
+                    "rotation_position": 30
+                },
+                {
+                    "employee": "Carlos",
+                    "date": "2025-07-31",
+                    "shift": "Noche",
+                    "start": "22:00",
+                    "end": "06:00",
+                    "rotation_position": 30
+                },
+                {
+                    "employee": "Dilan",
+                    "date": "2025-07-31",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 30
+                },
+                {
+                    "employee": "Brayan",
+                    "date": "2025-07-31",
+                    "shift": "Descanso",
+                    "start": "00:00",
+                    "end": "23:59",
+                    "rotation_position": 30
+                }
+            ],
+            "rotation_position": 0
         }
     ]
 }

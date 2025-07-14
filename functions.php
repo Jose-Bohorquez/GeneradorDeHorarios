@@ -27,33 +27,55 @@ function saveSchedules($schedules) {
     return $result !== false;
 }
 
-// Generar horarios rotativos 2x2
-// Modifica la función generateRotativeSchedule
-function generateRotativeSchedule($employees, $startDate, $month = null) {
-    // Filtrar empleados rotativos (sin horario fijo)
+// Generar horarios rotativos 2x2 con configuración de turnos
+function generateRotativeSchedule($employees, $startDate, $month = null, $shiftType = '8hours') {
+    // Separar empleados por tipo
     $rotativeEmployees = array_filter($employees, function($emp) {
-        return empty($emp['fixed_schedule']) && $emp['active'];
+        return empty($emp['fixed_schedule']) && empty($emp['supervisor']) && $emp['active'];
+    });
+    
+    $supervisorEmployees = array_filter($employees, function($emp) {
+        return !empty($emp['supervisor']) && $emp['active'];
+    });
+    
+    $fixedEmployees = array_filter($employees, function($emp) {
+        return !empty($emp['fixed_schedule']) && empty($emp['supervisor']) && $emp['active'];
     });
     
     $rotativeEmployees = array_values($rotativeEmployees); // Reindexar array
     $count = count($rotativeEmployees);
     
-    if ($count < 4) {
-        return ['error' => 'Se necesitan al menos 4 empleados activos para la rotación 2x2'];
+    // Definir turnos según modalidad
+    if ($shiftType === '6hours') {
+        $shifts = [
+            'Madrugada' => ['start' => '00:00', 'end' => '06:00'],
+            'Mañana' => ['start' => '06:00', 'end' => '12:00'],
+            'Tarde' => ['start' => '12:00', 'end' => '18:00'],
+            'Noche' => ['start' => '18:00', 'end' => '00:00']
+        ];
+        $maxRotativeEmployees = 5;
+        $shiftNames = ['Madrugada', 'Mañana', 'Tarde', 'Noche'];
+    } else {
+        $shifts = [
+            'Mañana' => ['start' => '06:00', 'end' => '14:00'],
+            'Tarde' => ['start' => '14:00', 'end' => '22:00'],
+            'Noche' => ['start' => '22:00', 'end' => '06:00']
+        ];
+        $maxRotativeEmployees = 4;
+        $shiftNames = ['Mañana', 'Tarde', 'Noche'];
     }
     
-    // Definir turnos
-    $shifts = [
-        ['name' => 'Mañana', 'start' => '06:00', 'end' => '14:00'],
-        ['name' => 'Tarde', 'start' => '14:00', 'end' => '22:00'],
-        ['name' => 'Noche', 'start' => '22:00', 'end' => '06:00'],
-        ['name' => 'Descanso', 'start' => null, 'end' => null]
-    ];
+    if ($count < count($shifts)) {
+        return ['error' => "Se necesitan al menos " . count($shifts) . " empleados rotativos"];
+    }
+    
+    // Seleccionar empleados para rotación
+    $activeRotativeEmployees = array_slice($rotativeEmployees, 0, $maxRotativeEmployees);
+    $officeEmployees = array_slice($rotativeEmployees, $maxRotativeEmployees);
     
     $schedule = [];
-    $currentDate = new DateTime($startDate);
     
-    // Determinar rango de fechas (todo el mes)
+    // Determinar rango de fechas
     if ($month) {
         $monthDate = new DateTime($month);
         $monthDate->modify('first day of this month');
@@ -61,67 +83,142 @@ function generateRotativeSchedule($employees, $startDate, $month = null) {
         $endDate = clone $monthDate;
         $endDate->modify('last day of this month');
     } else {
-        // Si no se especifica mes, usar 4 semanas desde startDate
+        $currentDate = new DateTime($startDate);
         $endDate = clone $currentDate;
         $endDate->add(new DateInterval('P4W'));
     }
     
-    $currentDate = new DateTime($startDate);
+    // IMPLEMENTACIÓN CORRECTA DEL PATRÓN 2x2
+    // Patrón de rotación de 8 días para cada empleado:
+    // - Días 1-2: Turno A
+    // - Días 3-4: Turno B  
+    // - Días 5-6: Turno C
+    // - Días 7-8: Descanso
     
-    // Determinar posición inicial basada en el último horario guardado
-    $lastSchedule = loadSchedules();
-    $lastPosition = 0;
+    // Definir el patrón de rotación para 4 empleados en turnos de 8 horas
+    $rotationPattern = [];
+    $numShifts = count($shiftNames);
+    $cycleLength = 8;
     
-    if (!empty($lastSchedule)) {
-        $lastEntry = end($lastSchedule);
-        $lastPosition = $lastEntry['rotation_position'] ?? 0;
-    }
-    
-    // Generar horario
-    while ($currentDate <= $endDate) {
-        // Rotación cada 2 días
-        $rotationGroup = floor(($currentDate->diff(new DateTime($startDate))->days) / 2) % $count;
-        $rotationPosition = ($lastPosition + $rotationGroup) % $count;
+    // Crear patrón para cada empleado
+    for ($empIndex = 0; $empIndex < $maxRotativeEmployees; $empIndex++) {
+        $pattern = [];
         
-        for ($i = 0; $i < $count; $i++) {
-            $employeeIndex = ($rotationPosition + $i) % $count;
-            $shiftIndex = $i % 4;
+        // Cada empleado tiene un offset de 2 días
+        $offset = $empIndex * 2;
+        
+        for ($day = 0; $day < $cycleLength; $day++) {
+            $adjustedDay = ($day + $offset) % $cycleLength;
             
-            $day1 = clone $currentDate;
-            $day2 = (clone $currentDate)->add(new DateInterval('P1D'));
-            
-            // Solo agregar si estamos dentro del rango de fechas
-            if ($day1 <= $endDate) {
-                $schedule[] = [
-                    'employee' => $rotativeEmployees[$employeeIndex]['name'],
-                    'date' => $day1->format('Y-m-d'),
-                    'shift' => $shifts[$shiftIndex]['name'],
-                    'start' => $shifts[$shiftIndex]['start'],
-                    'end' => $shifts[$shiftIndex]['end'],
-                    'rotation_position' => $rotationPosition
-                ];
+            if ($adjustedDay < 2) {
+                // Días 0-1: Primer turno
+                $shiftIndex = 0;
+            } elseif ($adjustedDay < 4) {
+                // Días 2-3: Segundo turno
+                $shiftIndex = 1;
+            } elseif ($adjustedDay < 6) {
+                // Días 4-5: Tercer turno
+                $shiftIndex = 2;
+            } else {
+                // Días 6-7: Descanso
+                $shiftIndex = -1;
             }
             
-            if ($day2 <= $endDate) {
+            $pattern[$day] = $shiftIndex;
+        }
+        
+        $rotationPattern[$empIndex] = $pattern;
+    }
+    
+    // Generar horario día por día
+    $currentDate = new DateTime($startDate);
+    
+    while ($currentDate <= $endDate) {
+        $daysSinceStart = $currentDate->diff(new DateTime($startDate))->days;
+        $cycleDay = $daysSinceStart % $cycleLength;
+        
+        $dailyAssignments = [];
+        
+        // Asignar cada turno
+        for ($shiftIndex = 0; $shiftIndex < $numShifts; $shiftIndex++) {
+            $shiftName = $shiftNames[$shiftIndex];
+            $assignedEmployee = null;
+            
+            // Buscar qué empleado debe trabajar este turno hoy
+            for ($empIndex = 0; $empIndex < count($activeRotativeEmployees); $empIndex++) {
+                if ($rotationPattern[$empIndex][$cycleDay] === $shiftIndex) {
+                    $assignedEmployee = $activeRotativeEmployees[$empIndex];
+                    break;
+                }
+            }
+            
+            // Asignar el turno
+            if ($assignedEmployee) {
                 $schedule[] = [
-                    'employee' => $rotativeEmployees[$employeeIndex]['name'],
-                    'date' => $day2->format('Y-m-d'),
-                    'shift' => $shifts[$shiftIndex]['name'],
-                    'start' => $shifts[$shiftIndex]['start'],
-                    'end' => $shifts[$shiftIndex]['end'],
-                    'rotation_position' => $rotationPosition
+                    'employee' => $assignedEmployee['name'],
+                    'date' => $currentDate->format('Y-m-d'),
+                    'shift' => $shiftName,
+                    'start' => $shifts[$shiftName]['start'],
+                    'end' => $shifts[$shiftName]['end'],
+                    'rotation_position' => $cycleDay
+                ];
+                
+                $dailyAssignments[] = $assignedEmployee['name'];
+            }
+        }
+        
+        // Asignar empleados en descanso
+        for ($empIndex = 0; $empIndex < count($activeRotativeEmployees); $empIndex++) {
+            $employee = $activeRotativeEmployees[$empIndex];
+            
+            if (!in_array($employee['name'], $dailyAssignments)) {
+                $schedule[] = [
+                    'employee' => $employee['name'],
+                    'date' => $currentDate->format('Y-m-d'),
+                    'shift' => 'Descanso',
+                    'start' => null,
+                    'end' => null,
+                    'rotation_position' => $cycleDay
                 ];
             }
         }
         
-        $currentDate->add(new DateInterval('P2D'));
+        $currentDate->add(new DateInterval('P1D'));
+    }
+    
+    // Agregar empleados de oficina
+    $currentDate = new DateTime($startDate);
+    while ($currentDate <= $endDate) {
+        foreach ($officeEmployees as $employee) {
+            $schedule[] = [
+                'employee' => $employee['name'],
+                'date' => $currentDate->format('Y-m-d'),
+                'shift' => 'Oficina',
+                'start' => '07:00',
+                'end' => '17:00',
+                'rotation_position' => null
+            ];
+        }
+        $currentDate->add(new DateInterval('P1D'));
+    }
+    
+    // Agregar supervisores
+    $currentDate = new DateTime($startDate);
+    while ($currentDate <= $endDate) {
+        foreach ($supervisorEmployees as $employee) {
+            $schedule[] = [
+                'employee' => $employee['name'],
+                'date' => $currentDate->format('Y-m-d'),
+                'shift' => 'Supervisor',
+                'start' => '07:00',
+                'end' => '17:00',
+                'rotation_position' => null
+            ];
+        }
+        $currentDate->add(new DateInterval('P1D'));
     }
     
     // Agregar empleados con horario fijo
-    $fixedEmployees = array_filter($employees, function($emp) {
-        return !empty($emp['fixed_schedule']) && $emp['active'];
-    });
-    
     $currentDate = new DateTime($startDate);
     while ($currentDate <= $endDate) {
         foreach ($fixedEmployees as $employee) {
@@ -137,9 +234,19 @@ function generateRotativeSchedule($employees, $startDate, $month = null) {
         $currentDate->add(new DateInterval('P1D'));
     }
     
-    // Ordenar por fecha
+    // Ordenar por fecha y prioridad
     usort($schedule, function($a, $b) {
-        return strcmp($a['date'], $b['date']);
+        $dateCompare = strcmp($a['date'], $b['date']);
+        if ($dateCompare === 0) {
+            $shiftPriority = [
+                'Madrugada' => 1, 'Mañana' => 2, 'Tarde' => 3, 'Noche' => 4, 
+                'Supervisor' => 5, 'Oficina' => 6, 'Descanso' => 7
+            ];
+            $priorityA = $shiftPriority[$a['shift']] ?? 8;
+            $priorityB = $shiftPriority[$b['shift']] ?? 8;
+            return $priorityA - $priorityB;
+        }
+        return $dateCompare;
     });
     
     return $schedule;

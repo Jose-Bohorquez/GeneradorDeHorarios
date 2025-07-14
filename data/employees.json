@@ -22,7 +22,8 @@
         },
         {
             "name": "Pablo",
-            "active": false
+            "active": false,
+            "supervisor": true
         }
     ]
 }

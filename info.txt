@@ -26,6 +26,35 @@ noc/
 │   ├── employees.json
 │   └── schedules.json
 
+estructura 14 jun 2025
+GeneradorDeHorarios/
+├── index.php          # Página principal (selector de modalidades)
+├── index1.php         # Versión básica 2x2 (HTML simple)
+├── index2.php         # Versión moderna 2x2 (TailwindCSS)
+├── index4.php         # Versión 4x4 (TailwindCSS)
+├── functions.php      # Lógica para rotación 2x2
+├── functions-4x4.php  # Lógica para rotación 4x4
+├── save.php          # Guardado de horarios (obsoleto)
+├── config.php        # Configuración y inicialización
+├── data/
+│   ├── employees.json # Base de datos de empleados
+│   └── schedules.json # Horarios guardados
+├── README.md         # Documentación básica
+└── info.txt          # Notas de desarrollo
+
+
+GeneradorDeHorarios/
+├── public/
+│   ├── index.php
+│   ├── assets/
+├── src/
+│   ├── classes/
+│   ├── functions/
+│   └── config/
+├── data/
+├── templates/
+└── docs/
+
 pendientes:
 sacar el total de horas mensuales por colaborador
 sacar total total de horas semanales por colaborador

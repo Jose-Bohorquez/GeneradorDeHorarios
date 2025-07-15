@@ -7,6 +7,10 @@ $error = '';
 $success = '';
 $update = '';
 
+// Mantener valores del formulario después del envío
+$selectedMonth = $_POST['month'] ?? date('Y-m');
+$selectedShiftType = $_POST['shift_type'] ?? '8hours';
+
 // Cargar empleados y horarios
 $employees = loadEmployees();
 $schedules = loadSchedules();
@@ -59,10 +63,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['generate_schedule']) || isset($_POST['preview_schedule'])) {
         $selectedMonth = $_POST['month'] ?? date('Y-m');
         $shiftType = $_POST['shift_type'] ?? '8hours';
+        $selectedShiftType = $shiftType; // Mantener la selección
         
-        if (!empty($selectedMonth)) {
+        // Validar configuración de empleados según tipo de turno
+        $activeEmployees = array_filter($employees, fn($emp) => $emp['active']);
+        $rotativeEmployees = array_filter($activeEmployees, fn($emp) => empty($emp['fixed_schedule']));
+        $fixedEmployees = array_filter($activeEmployees, fn($emp) => !empty($emp['fixed_schedule']));
+        
+        $rotativeCount = count($rotativeEmployees);
+        $fixedCount = count($fixedEmployees);
+        
+        $validationError = '';
+        
+        if ($shiftType === '8hours') {
+            // Para 8 horas: necesitamos exactamente 4 rotativos, los demás pueden ser fijos
+            if ($rotativeCount < 4) {
+                $validationError = "Para turnos de 8 horas se necesitan exactamente 4 empleados rotativos. Actualmente tienes {$rotativeCount} rotativos.";
+            } elseif ($rotativeCount > 4) {
+                $validationError = "Para turnos de 8 horas se necesitan exactamente 4 empleados rotativos. Actualmente tienes {$rotativeCount} rotativos. Los empleados adicionales deben tener horario fijo.";
+            }
+        } elseif ($shiftType === '6hours') {
+            // Para 6 horas: necesitamos exactamente 5 rotativos
+            if ($rotativeCount < 5) {
+                $validationError = "Para turnos de 6 horas se necesitan exactamente 5 empleados rotativos. Actualmente tienes {$rotativeCount} rotativos.";
+            } elseif ($rotativeCount > 5) {
+                $validationError = "Para turnos de 6 horas se necesitan exactamente 5 empleados rotativos. Actualmente tienes {$rotativeCount} rotativos. Los empleados adicionales deben tener horario fijo.";
+            }
+        }
+        
+        if ($validationError) {
+            $error = $validationError;
+        } elseif (!empty($selectedMonth)) {
             $monthDate = $selectedMonth . '-01';
-            $schedule = generateRotativeSchedule($employees, $monthDate, $monthDate, $shiftType);
+            $schedule = generateRotativeSchedule($employees, $shiftType, $monthDate, $selectedMonth);
             
             if (isset($schedule['error'])) {
                 $error = $schedule['error'];
@@ -117,6 +150,8 @@ if (isset($_POST['preview_schedule']) && isset($previewSchedule)) {
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <script>
         tailwind.config = {
@@ -196,11 +231,24 @@ if (isset($_POST['preview_schedule']) && isset($previewSchedule)) {
     <!-- Header -->
     <header class="header-gradient text-white py-8 mb-6">
         <div class="container mx-auto px-4">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">
-                    <i class="fas fa-calendar-alt mr-4"></i>Generador de Horarios NOC 2x2
-                </h1>
-                <p class="text-xl opacity-90">Sistema de rotación de turnos para equipos de monitoreo</p>
+            <div class="flex items-center justify-between">
+                <div class="text-center flex-1">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                        <i class="fas fa-calendar-alt mr-4"></i>Generador de Horarios NOC 2x2
+                    </h1>
+                    <p class="text-xl opacity-90">Sistema de rotación de turnos para equipos de monitoreo</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="dashboard.php" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-6 py-3 rounded-lg transition-all duration-300 flex items-center">
+                        <i class="fas fa-chart-bar mr-2"></i>Dashboard
+                    </a>
+                    <a href="validar_horarios.php" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-6 py-3 rounded-lg transition-all duration-300 flex items-center">
+                        <i class="fas fa-eye mr-2"></i>Ver Horarios
+                    </a>
+                    <a href="gestionar_horarios.php" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-6 py-3 rounded-lg transition-all duration-300 flex items-center">
+                        <i class="fas fa-cog mr-2"></i>Gestionar
+                    </a>
+                </div>
             </div>
         </div>
         
@@ -412,18 +460,18 @@ if (isset($_POST['preview_schedule']) && isset($previewSchedule)) {
                     </h2>
                 </div>
                 <div class="p-6">
-                    <form method="POST" class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+                    <form method="POST" id="scheduleForm" class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
                         <div>
                             <label for="month" class="block text-sm font-medium text-gray-700 mb-2">Seleccionar Mes:</label>
                             <input type="month" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
-                                   name="month" id="month" value="<?= date('Y-m') ?>" required>
+                                   name="month" id="month" value="<?= htmlspecialchars($selectedMonth) ?>" required>
                         </div>
                         <div>
                             <label for="shift_type" class="block text-sm font-medium text-gray-700 mb-2">Tipo de Turnos:</label>
                             <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
                                     name="shift_type" id="shift_type" required>
-                                <option value="8hours">Turnos de 8 horas (Sistema anterior)</option>
-                                <option value="6hours">Turnos de 6 horas (Nueva ley colombiana)</option>
+                                <option value="8hours" <?= $selectedShiftType === '8hours' ? 'selected' : '' ?>>Turnos de 8 horas (Sistema anterior)</option>
+                                <option value="6hours" <?= $selectedShiftType === '6hours' ? 'selected' : '' ?>>Turnos de 6 horas (Nueva ley colombiana)</option>
                             </select>
                             <p class="mt-1 text-xs text-gray-500">
                                 <i class="fas fa-info-circle mr-1"></i>
@@ -540,6 +588,91 @@ if (isset($_POST['preview_schedule']) && isset($previewSchedule)) {
     </footer>
     
     <script>
+        // Función para validar configuración de empleados según tipo de turno
+        function validateEmployeeConfiguration(shiftType) {
+            const activeEmployees = [];
+            const rotativeEmployees = [];
+            const fixedEmployees = [];
+            
+            document.querySelectorAll('.active-switch').forEach((checkbox, index) => {
+                if (checkbox.checked) {
+                    const employeeName = checkbox.closest('.employee-card').querySelector('h3').textContent;
+                    activeEmployees.push(employeeName);
+                    
+                    const isFixed = document.getElementById(`fixed_${index}`).checked;
+                    if (isFixed) {
+                        fixedEmployees.push(employeeName);
+                    } else {
+                        rotativeEmployees.push(employeeName);
+                    }
+                }
+            });
+            
+            let isValid = true;
+            let message = '';
+            let icon = 'success';
+            
+            if (shiftType === '8hours') {
+                if (rotativeEmployees.length < 4) {
+                    isValid = false;
+                    icon = 'error';
+                    message = `<strong>Configuración incorrecta para turnos de 8 horas</strong><br><br>
+                              Se necesitan exactamente <strong>4 empleados rotativos</strong>.<br>
+                              Actualmente tienes <strong>${rotativeEmployees.length} rotativos</strong>.<br><br>
+                              <strong>Empleados rotativos actuales:</strong><br>
+                              ${rotativeEmployees.length > 0 ? rotativeEmployees.join(', ') : 'Ninguno'}<br><br>
+                              <strong>Empleados con horario fijo:</strong><br>
+                              ${fixedEmployees.length > 0 ? fixedEmployees.join(', ') : 'Ninguno'}`;
+                } else if (rotativeEmployees.length > 4) {
+                    isValid = false;
+                    icon = 'error';
+                    message = `<strong>Configuración incorrecta para turnos de 8 horas</strong><br><br>
+                              Se necesitan exactamente <strong>4 empleados rotativos</strong>.<br>
+                              Actualmente tienes <strong>${rotativeEmployees.length} rotativos</strong>.<br><br>
+                              Los empleados adicionales deben tener <strong>horario fijo</strong>.<br><br>
+                              <strong>Empleados rotativos actuales:</strong><br>
+                              ${rotativeEmployees.join(', ')}<br><br>
+                              <strong>Empleados con horario fijo:</strong><br>
+                              ${fixedEmployees.length > 0 ? fixedEmployees.join(', ') : 'Ninguno'}`;
+                } else {
+                    message = `<strong>✅ Configuración correcta para turnos de 8 horas</strong><br><br>
+                              <strong>4 empleados rotativos:</strong><br>
+                              ${rotativeEmployees.join(', ')}<br><br>
+                              ${fixedEmployees.length > 0 ? `<strong>Empleados con horario fijo:</strong><br>${fixedEmployees.join(', ')}` : ''}`;
+                }
+            } else if (shiftType === '6hours') {
+                if (rotativeEmployees.length < 5) {
+                    isValid = false;
+                    icon = 'error';
+                    message = `<strong>Configuración incorrecta para turnos de 6 horas</strong><br><br>
+                              Se necesitan exactamente <strong>5 empleados rotativos</strong>.<br>
+                              Actualmente tienes <strong>${rotativeEmployees.length} rotativos</strong>.<br><br>
+                              <strong>Empleados rotativos actuales:</strong><br>
+                              ${rotativeEmployees.length > 0 ? rotativeEmployees.join(', ') : 'Ninguno'}<br><br>
+                              <strong>Empleados con horario fijo:</strong><br>
+                              ${fixedEmployees.length > 0 ? fixedEmployees.join(', ') : 'Ninguno'}`;
+                } else if (rotativeEmployees.length > 5) {
+                    isValid = false;
+                    icon = 'error';
+                    message = `<strong>Configuración incorrecta para turnos de 6 horas</strong><br><br>
+                              Se necesitan exactamente <strong>5 empleados rotativos</strong>.<br>
+                              Actualmente tienes <strong>${rotativeEmployees.length} rotativos</strong>.<br><br>
+                              Los empleados adicionales deben tener <strong>horario fijo</strong>.<br><br>
+                              <strong>Empleados rotativos actuales:</strong><br>
+                              ${rotativeEmployees.join(', ')}<br><br>
+                              <strong>Empleados con horario fijo:</strong><br>
+                              ${fixedEmployees.length > 0 ? fixedEmployees.join(', ') : 'Ninguno'}`;
+                } else {
+                    message = `<strong>✅ Configuración correcta para turnos de 6 horas</strong><br><br>
+                              <strong>5 empleados rotativos:</strong><br>
+                              ${rotativeEmployees.join(', ')}<br><br>
+                              ${fixedEmployees.length > 0 ? `<strong>Empleados con horario fijo:</strong><br>${fixedEmployees.join(', ')}` : ''}`;
+                }
+            }
+            
+            return { isValid, message, icon };
+        }
+        
         // Función para actualizar badges de un empleado
         function updateEmployeeBadges(index) {
             const badgeContainer = document.getElementById(`badgeContainer_${index}`);
@@ -666,56 +799,107 @@ if (isset($_POST['preview_schedule']) && isset($previewSchedule)) {
                     updateStatistics();
                 });
             });
+            
+            // Validación en tiempo real del tipo de turno
+            document.getElementById('shift_type').addEventListener('change', function() {
+                const shiftType = this.value;
+                const validation = validateEmployeeConfiguration(shiftType);
+                
+                Swal.fire({
+                    title: shiftType === '6hours' ? 'Turnos de 6 horas' : 'Turnos de 8 horas',
+                    html: validation.message,
+                    icon: validation.icon,
+                    confirmButtonText: 'Entendido',
+                    confirmButtonColor: validation.isValid ? '#10b981' : '#ef4444'
+                });
+            });
         });
 
         // Función para resetear el formulario
         function resetForm() {
-            if (confirm('¿Está seguro de que desea resetear todos los cambios?')) {
-                // Resetear el formulario
-                document.getElementById('employeeForm').reset();
-                
-                // Ocultar todos los campos de tiempo
-                document.querySelectorAll('.time-inputs').forEach(div => {
-                    div.classList.remove('show');
-                });
-                
-                // Quitar requerimiento de campos de tiempo
-                document.querySelectorAll('.time-inputs input[type="time"]').forEach(field => {
-                    field.required = false;
-                });
-                
-                // Actualizar badges y estadísticas
-                document.querySelectorAll('.active-switch').forEach((checkbox, index) => {
-                    updateEmployeeBadges(index);
-                    updateCardAppearance(index);
-                });
-                updateStatistics();
-                
-                // Recargar la página para restaurar valores originales
-                setTimeout(() => {
-                    location.reload();
-                }, 500);
-            }
+            Swal.fire({
+                title: '¿Resetear formulario?',
+                text: '¿Está seguro de que desea resetear todos los cambios?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#ef4444',
+                cancelButtonColor: '#6b7280',
+                confirmButtonText: 'Sí, resetear',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Resetear el formulario
+                    document.getElementById('employeeForm').reset();
+                    
+                    // Ocultar todos los campos de tiempo
+                    document.querySelectorAll('.time-inputs').forEach(div => {
+                        div.classList.remove('show');
+                    });
+                    
+                    // Quitar requerimiento de campos de tiempo
+                    document.querySelectorAll('.time-inputs input[type="time"]').forEach(field => {
+                        field.required = false;
+                    });
+                    
+                    // Actualizar badges y estadísticas
+                    document.querySelectorAll('.active-switch').forEach((checkbox, index) => {
+                        updateEmployeeBadges(index);
+                        updateCardAppearance(index);
+                    });
+                    updateStatistics();
+                    
+                    // Recargar la página para restaurar valores originales
+                    setTimeout(() => {
+                        location.reload();
+                    }, 500);
+                }
+            });
         }
 
-        // Validación antes de enviar
+        // Validación antes de enviar el formulario de empleados
         document.getElementById('employeeForm').addEventListener('submit', function(e) {
             const fixedEmployees = document.querySelectorAll('input[value="fixed"]:checked');
             let hasError = false;
+            let errorMessages = [];
             
             fixedEmployees.forEach(radio => {
                 const index = radio.dataset.index;
+                const employeeName = radio.closest('.employee-card').querySelector('h3').textContent;
                 const startTime = document.querySelector(`input[name="start_time[${index}]"]`).value;
                 const endTime = document.querySelector(`input[name="end_time[${index}]"]`).value;
                 
                 if (!startTime || !endTime) {
                     hasError = true;
+                    errorMessages.push(`${employeeName}: Falta horario de ${!startTime ? 'inicio' : 'fin'}`);
                 }
             });
             
             if (hasError) {
                 e.preventDefault();
-                alert('Por favor, complete los horarios de inicio y fin para todos los empleados con horario fijo.');
+                Swal.fire({
+                    title: 'Horarios incompletos',
+                    html: `<strong>Complete los horarios para empleados con horario fijo:</strong><br><br>${errorMessages.join('<br>')}`,
+                    icon: 'error',
+                    confirmButtonText: 'Entendido',
+                    confirmButtonColor: '#ef4444'
+                });
+            }
+        });
+
+        // Validación antes de enviar el formulario de horarios
+        document.getElementById('scheduleForm').addEventListener('submit', function(e) {
+            const shiftType = document.getElementById('shift_type').value;
+            const validation = validateEmployeeConfiguration(shiftType);
+            
+            if (!validation.isValid) {
+                e.preventDefault();
+                Swal.fire({
+                    title: 'Configuración incorrecta',
+                    html: validation.message,
+                    icon: 'error',
+                    confirmButtonText: 'Corregir configuración',
+                    confirmButtonColor: '#ef4444'
+                });
             }
         });
     </script>
